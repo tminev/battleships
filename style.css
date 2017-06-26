@@ -1,0 +1,39 @@
+#container{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	height: 500px;
+	background-color: green;
+}
+td{
+	width: 70px;
+	height: 70px
+}
+table :hover {
+	border: 2px solid red}
+
+#second > table > tbody > tr > td:hover{
+background-image: url("ship.png")
+}
+#second{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	
+}
+img{
+	width: 20px;
+	height: 20px
+
+}
+#second p{display: none}
+
+.result p {
+	width: 90px;
+	display: inline-block;
+}
+
+.result{
+	width: 181px;
+	margin: 0 auto;
+}
