@@ -1,17 +1,17 @@
 #container{
 	position: relative;
-	left: 10%;
-	width: 80%;
-	height: 500px;
+	left: 5%;
+	width: 90%;
+
 	background-color: green;
 }
 td {
-	width: 70px;
-	height: 70px
+	width: 100px;
+	height: 80px
 }
 img{
-	width: 70px;
-	height: 70px
+	
+	height: 80px
 }
 table :hover {
 	border: 2px solid red}
@@ -36,3 +36,6 @@ background-image: url("mernik.gif")
 	width: 181px;
 	margin: 0 auto;
 }
+
+table  {
+	border: 2px solid red}

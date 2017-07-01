@@ -52,15 +52,15 @@
 
 </div>
 <script type="text/javascript">
-var temp = 0 , flag;
+var temp = 0 , flag =1;
 var shot = 0;
 var miss = 0;
 var pc_score = 0;
 //arrange my ships
 $("#furst td").click(function(){ 
 
-			var img=Math.floor((Math.random() * 4) + 1);
-	var img = "<img src=' img/ship" +img+ ".png ' />";
+	var img=Math.floor((Math.random() * 4) + 1);
+	var img = "<img src=' img/ship" +img+ ".gif ' />";
 	$(this).append(img);
 	$(this).off('click');
 	temp=temp+1;
@@ -71,7 +71,7 @@ $("#furst td").click(function(){
 			while(a--)b[a]=a+1;
 			return b;}
 
-			function rand(a,b,c,d){
+	function rand(a,b,c,d){
 			c=a.length;
 			while(c)b=Math.random()*(--c+1)|0,d=a[c],a[c]=a[b],a[b]=d}
 			var a=numberArray(24);
@@ -81,13 +81,14 @@ $("#furst td").click(function(){
 
 	//my thurn
 	var i =0;
-	if (temp==10) {
+	if (temp==10) { 
+		
 		$("#furst td").off('click');
 	   	$("#second td").on('click');
 	   	
 	   
 	    $("#second td").click(function(){ 
-	    document.getElementById("shot").play(); ;
+	    document.getElementById("shot").play(); 
 		$(this).css("background-color","gray");
 		$(this).off('click');
 	   	var shoting = $(this).children("p").html();
@@ -100,21 +101,9 @@ $("#furst td").click(function(){
 	    	$(this).append(imgcrash);
 
 	    	setTimeout(function(){	document.getElementById("hit").play();  }, 1000);
-			 
-			
-
-
-
-
-
-
-
-
-
 	   		$("#my_score").text("My Score: " + shot);}
 
-	   	// $("td").off('click');
-	   	// $("td").on('click');
+	  
 					//pc thurn
 				    setTimeout(function(){	
 					    var td = document.getElementsByClassName('td_furst')[a[i]];
@@ -122,10 +111,10 @@ $("#furst td").click(function(){
 					    td.style.background = "gray";
 					    document.getElementById("shot").play();
 					    var src = td.querySelector('img').getAttribute('src');
-					    // $("td").on('click');
+					  
 
 					    if (src) {
-					    	//td.querySelector('img').src="img/ship2.png";
+					    	
 					    	td.style.background = "red";
 					    	var rnd=Math.floor((Math.random() * 4) + 1);
 					    	setTimeout(function(){	document.getElementById("hit").play();  }, 1000);
