@@ -5,7 +5,11 @@
 	height: 500px;
 	background-color: green;
 }
-td{
+td {
+	width: 70px;
+	height: 70px
+}
+img{
 	width: 70px;
 	height: 70px
 }
@@ -13,18 +17,13 @@ table :hover {
 	border: 2px solid red}
 
 #second > table > tbody > tr > td:hover{
-background-image: url("ship.png")
+background-image: url("mernik.gif")
 }
 #second{
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	
-}
-img{
-	width: 20px;
-	height: 20px
-
 }
 #second p{display: none}
 
