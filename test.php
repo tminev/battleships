@@ -4,6 +4,7 @@
 	<title>battle</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <audio id="shot"><source src="audio/shot.mp3" type="audio/mpeg"></audio>
@@ -11,7 +12,7 @@
 
 <div id="container">
 	<div id="furst">USER
-					<?php
+					<?php 
 					//my table
 				echo "<table id='table'>";
 				for ($row = 0; $row < 5; $row ++) {
@@ -49,13 +50,16 @@
 	?>
 	</div>
 	<div class="result"> <p id="my_score">My Score: 0</p><p id="pc_score">Pc Score: 0</p> </div>
-
+	<p>Mouse is at coordinates: <span></span>.</p>
 </div>
 <script type="text/javascript">
 var temp = 0 , flag =1;
 var shot = 0;
 var miss = 0;
 var pc_score = 0;
+
+
+
 //arrange my ships
 $("#furst td").click(function(){ 
 
@@ -97,7 +101,7 @@ $("#furst td").click(function(){
 	    	shot++;
 	    	$(this).css("background-color","red");
 	    	var img=Math.floor((Math.random() * 4) + 1);
-	    	var imgcrash="<img src=' img/ship" +img+ ".png ' />";
+	    	var imgcrash="<img src=' img/ship" +img+ ".gif ' />";
 	    	$(this).append(imgcrash);
 
 	    	setTimeout(function(){	document.getElementById("hit").play();  }, 1000);
@@ -132,6 +136,25 @@ $("#furst td").click(function(){
 
 	}
 }); 
+
+// cool
+
+$(document).mousemove( function(e) {
+   mouseY = e.pageY;
+   mouseX = e.pageX;
+   translateY = 'translateY(' + (mouseY-200)/20 + 'px)';
+   translateX = 'translateX(' + (mouseX-800)/20 + 'px)';
+
+    $('td').css({'transform': translateY});
+     $('tr').css({'transform': translateX});
+    
+    $('#second').css({'transform': translateX});
+     $('#furst').css({'transform': translateX});
+      $('#container').css({'transform': translateY});
+});
+
+
+ 
 
 
 
