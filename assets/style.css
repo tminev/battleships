@@ -1,0 +1,75 @@
+body{height: 600px;
+	background-image: url("../img/back.gif");
+background-repeat: no-repeat;
+background-size: cover;
+} 
+#container{
+	position: relative;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
+#planets{
+position: absolute;
+	width: 99%;
+height: 500px}
+#earth{position: absolute;
+	left: 0px;
+	height: 500px;
+	width: 500px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url( "../img/earth.png")}
+
+#mars{position: absolute;
+	bottom: 0px;
+	right: 50px;
+	height: 200px;
+	width: 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image:url( "../img/mars.png")}
+td {
+	width: 80px;
+	height: 60px
+}
+img{	height: 60px}
+table :hover {
+	background-position: center; 
+	border: 1px solid blue}
+
+#second > table > tbody > tr > td:hover{
+	background-repeat: no-repeat;
+background-image: url("../img/mernik.gif")
+}
+#second{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;	
+}
+#second p{display: none}
+div, p {color: white;
+font-family: 'Fresca', sans-serif;
+text-shadow: 10px 10px 10px gray;
+}
+
+.result p {
+	width: 100px;
+	margin: 20px;
+	font-size: 20px;
+	display: inline-block;
+}
+
+.result{
+	position: absolute;
+	width: 290px;
+	left: 30%;
+	z-index: 10;
+}
+#message , #message2{position: absolute;
+	top: 250px;
+	left: 15%;
+	width: 80%;
+	font-size: 200px;
+	display: none;	
+}
